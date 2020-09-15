@@ -55,9 +55,7 @@ const userSchema = new mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: 'Campaign',
         // required: [true, 'A campaign is unique to a User']
-    },
-    category: []
-       
+    }
 }, {
     timestamps: true
 }

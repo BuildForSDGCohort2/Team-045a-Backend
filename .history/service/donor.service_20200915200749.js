@@ -1,0 +1,29 @@
+const User = require('../models/user')
+
+
+
+const DonorService ={
+
+    /**
+ * @summary Add category of user's interest
+ * @param {*} userId 
+ * @param {*} categories 
+ */
+    addUserCategory: async (userId, categories) =>{
+
+        if(!userId) throw Error('User Id is required');
+        const user = await User.findOne({id:userId});
+        if(!user) throw Error("User not found");
+           user.category= [...categories];
+            await user.save();
+            return user;
+    },
+    donate: async (campaignId, userId, price)=>{
+
+
+        return 0;
+    
+    }
+}
+
+ 

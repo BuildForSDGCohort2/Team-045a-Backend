@@ -15,9 +15,6 @@ router.get('/login', controllers.getLogin);
 
 router.post('/login', controllers.postLogin);
 
-router.post('/addUserCategory', DonorController.addUserController );
-
-router.post('/donate', DonorController.donate);
-
+router.post('/addCategory', DonorController.addUserController )
 
 module.exports = router;

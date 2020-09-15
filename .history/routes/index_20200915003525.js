@@ -3,7 +3,7 @@ const router = require('express').Router();
 const { home } = require('../controllers/index');
 const controllers = require('../controllers/index');
 
-const {DonorController}= require('../controllers/donor.controller')
+const {addCategoryController}= require('../controllers/donor.controller')
 
 router.get('/', home);
 
@@ -15,9 +15,6 @@ router.get('/login', controllers.getLogin);
 
 router.post('/login', controllers.postLogin);
 
-router.post('/addUserCategory', DonorController.addUserController );
-
-router.post('/donate', DonorController.donate);
-
+router.post('/addCategory', addCategoryController )
 
 module.exports = router;

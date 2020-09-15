@@ -56,7 +56,7 @@ const userSchema = new mongoose.Schema({
         ref: 'Campaign',
         // required: [true, 'A campaign is unique to a User']
     },
-    category: []
+    category: [{name :String}]
        
 }, {
     timestamps: true

@@ -36,12 +36,7 @@ const campaignSchema = new mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: 'User',
         required: [true, 'A campaign must belong to a user']
-    },
-    donors: [{
-        type: mongoose.Schema.ObjectId,
-        ref: 'Donor'
-
-    }]
+    }
 },
     {
         timestamps: true,
